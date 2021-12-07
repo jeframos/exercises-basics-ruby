@@ -1,10 +1,6 @@
 module AcceptsComments
     def comments
-        if @comments
-            @comments
-        else
-            @comments = []
-        end
+        @comments ||= []
     end
     
     def add_comment(comment)
@@ -30,8 +26,8 @@ end
 
 class Photo
     include AcceptsComments
-    def show
-        puts "Displaying #{object_id}..."
+    def initialize
+        @format = 'JPEG'
     end
 end 
 
@@ -49,4 +45,3 @@ p video.comments, song.comments
 puts video.play, song.play
 
 p photo.comments
-puts photo.show
