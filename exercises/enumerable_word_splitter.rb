@@ -10,6 +10,7 @@ class WordSplitter
     end
 end
 
+
 splitter = WordSplitter.new
 splitter.string = "how do you do"
 
