@@ -35,3 +35,6 @@ p splitter.first
 
 #O método "sort", retorna um array com todos os itens ordenados
 p splitter.sort
+
+#O método "find", localiza a primeira palavra que inclui beef
+p splitter.find { |word| word.include?("beef") }
